@@ -11,6 +11,9 @@ export default {
     Header,
     Banner
   },
+  mounted() {
+    console.log(videoDu)
+  },
   data() {
     return {
       // videoEn,
