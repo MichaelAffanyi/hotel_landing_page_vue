@@ -19,6 +19,11 @@ export default {
       // videoEn,
       videoDu
     }
+  },
+  methods: {
+    getNavigator() {
+      return navigator.language === 'de'
+    }
   }
 }
 </script>
@@ -34,7 +39,7 @@ export default {
 <!--  </div>-->
   <div>
   <video controls width="320">
-    <source :src="videoDu" type="video/mp4">
+    <source :src="getNavigator() && videoDu" type="video/mp4">
   </video>
   </div>
 </template>
